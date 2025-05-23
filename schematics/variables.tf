@@ -45,7 +45,7 @@ variable "resource_group" {
 
   validation {
     error_message = "Unique ID must begin and end with a letter and contain only letters, numbers, and - characters."
-    condition     = can(regex("^([a-zA-Z]|[a-z][-a-z0-9]*[a-z0-9])$", var.resource_group))
+    condition     = can(regex("^([a-zA-Z]|[a-zA-Z][-a-z0-9]*[a-z0-9])$", var.resource_group))
   }
 }
 
